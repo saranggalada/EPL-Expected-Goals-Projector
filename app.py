@@ -668,7 +668,7 @@ def runapp(model, season, hometeam, awayteam):
         cols[1].write(f'{awayteam}: `{true_ag}`')
         st.write('---')
 
-        st.write('#### RMSE')
+        st.write('#### Root Mean Square Error')
         cols = st.columns(2)
         cols[0].write(f'{hometeam}: `{round(pred_hg_rmse, 2)}`')
         cols[1].write(f'{awayteam}: `{round(pred_ag_rmse, 2)}`')
