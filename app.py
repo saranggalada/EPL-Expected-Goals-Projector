@@ -500,15 +500,34 @@ st.write("""
          """)
 st.write('---')
 
+
+# Sidebar
+
 st.sidebar.image("img/wizard.png")
-# st.sidebar.markdown("![](https://github.com/saranggalada/EPL-Expected-Goals-Projector/img/wizard.png)", unsafe_allow_html=True)
-st.sidebar.header('The xG Philosophy')
+st.sidebar.markdown("<h2 style='text-align: center;'>The xG Philosophy</h2>", unsafe_allow_html=True)
+# st.sidebar.header('The xG Philosophy')
+# cols = st.sidebar.columns(2)
+# cols[0].sidebar.header('The xG Philosophy')
+# cols[1].link_button('About', 'https://www.football-data.co.uk/')
 st.sidebar.markdown('---')
+
+st.sidebar.header('See Also')
+st.sidebar.markdown(
+    """
+- [EPL Viz](https://epl-viz.streamlit.app/) 🕵🏼 \
+(Visualizing 24yrs of EPL)
+- [The Pitch Prophecy](https://pitch-prophecy.streamlit.app/) 🔮 \
+(EPL Win Predictor)
+"""
+)
+st.sidebar.markdown('---')
+
 cols = st.sidebar.columns(2)
 cols[0].link_button('GitHub Repo', 'https://github.com/saranggalada/EPL-Expected-Goals-Projector')
 cols[1].link_button('Data Source', 'https://www.football-data.co.uk/')
-# st.sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
 st.sidebar.markdown("---\n*Copyright (c) 2024: Sarang Galada*")
+# st.sidebar.link_button('Author', 'https://www.linkedin.com/in/saranggalada')
+
 
 cols = st.columns(2)
 season = cols[0].selectbox('EPL Season', ('2023-24 season','2022-23 season','2021-22 season','2020-21 season','2019-20 season','2018-19 season','2017-18 season','2016-17 season','2015-16 season','2014-15 season','2013-14 season'))
